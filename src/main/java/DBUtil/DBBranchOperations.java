@@ -24,6 +24,12 @@ public class DBBranchOperations {
 
 		return statement.executeQuery();
 
-	}	
+	}
 
+	public static ResultSet DisplayBranchNameAndAssetsInThousandsOfDollars() throws SQLException {
+
+		String sql = "[dbo].[asp_branch_name_and_assets]";
+		PreparedStatement statement = DBConnection.getConnectionObj().prepareStatement(sql);
+		return statement.executeQuery();
+	}
 }
