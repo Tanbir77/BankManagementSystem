@@ -2,8 +2,8 @@ package Model;
 
 public class Loan {
 
-	private String loanNumber;
-	private String branchName;
+	private Loan customerLoan;
+	private Branch loanInBranch;
 	private long amount;
-	private String customerId;
+	private Customer loanTakenByCustomer;
 }
