@@ -34,5 +34,22 @@ public class BranchDaoImp implements BranchDao {
 
 		return null;
 	}
+	@Override
+	public List<String> findBrannchNameInBetweenAsset(long val1,long val2) {
+		try {
+			List<String> branchNameList = new ArrayList<>();
+			ResultSet rs = DBBranchOperations.findBrannchNameInBetweenAsset(val1,val2);
+			while (rs.next()) {
+				branchNameList.add(rs.getString(1));
+				
+			}
+			return branchNameList;
+		} catch (SQLException e) {
+			log.error("Query execution error during finding branch in between "+val1+" and"+val2+" :", e);
+		}
+
+		return null;
+	}
+	
 	
 }
