@@ -7,6 +7,6 @@ import java.util.List;
  *
  */
 public interface LoanDao {
-	List<String>getDistinctBranchName();
+	List<String> getDistinctBranchName();
 
 }
