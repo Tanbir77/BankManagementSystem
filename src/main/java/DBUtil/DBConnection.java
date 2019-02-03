@@ -19,13 +19,13 @@ public class DBConnection {
 
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	static final String DB_URL = "jdbc:sqlserver://vNTDACWSSQLD002;";
+	static final String DB_URL = "jdbc:sqlserver://vNTDACLSCRAPR01;";
 
-	static final String DB_NAME = "DEV_TEST;";
+	static final String DB_NAME = "BankAccountMNG;";
 	// Database credentials
 
-	static final String USER = "dev_test_dbo;";
-	static final String PASS = "dev_test_dbo123;";
+	static final String USER = "bankaccountmng_dbo;";
+	static final String PASS = "bankaccountmng_dbo123;";
 
 	private static final String JDBC_URL = DB_URL + "databaseName=" + DB_NAME + "user=" + USER + "password=" + PASS;
 
