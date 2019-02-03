@@ -2,6 +2,6 @@ package Model;
 
 public class Employee {
 	private String employeeName;
-	private String branchName;
+	private Branch branch;
 	private long salary;
 }
