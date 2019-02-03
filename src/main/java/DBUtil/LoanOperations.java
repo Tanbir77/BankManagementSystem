@@ -19,7 +19,7 @@ public class LoanOperations {
 		while (rs.next()) {
 			DistinctBranchNames.add(rs.getString(1));
 		}
-		return null;
+		return DistinctBranchNames;
 
 	}
 
