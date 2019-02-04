@@ -6,21 +6,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoanOperations {
+public class DBLoanOperations {
 
-	public static List<String> getDistinctBranchName() throws SQLException {
+	public static ResultSet getDistinctBranchName() throws SQLException {
 
 		String sql = "[dbo].[asp_name_of_allbranch_from_loan]";
 
 		PreparedStatement statement = DBConnection.getConnectionObj().prepareStatement(sql);
 
-		ResultSet rs = statement.executeQuery();
-		List<String> DistinctBranchNames=new ArrayList<>();
-		while (rs.next()) {
-			DistinctBranchNames.add(rs.getString(1));
-		}
-		return DistinctBranchNames;
-
+		return statement.executeQuery();
+		
 	}
 
 }

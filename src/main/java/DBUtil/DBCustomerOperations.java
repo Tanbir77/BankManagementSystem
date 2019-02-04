@@ -34,7 +34,7 @@ public class DBCustomerOperations {
 		
 	}
 	
-	public ResultSet getCustomerAndAccountInfo(Long amount) {
+	public ResultSet getCustomerAndAccountInfo(long amount) {
 		
 		String sql = "[dbo].[asp_inner_join9] , ?";
 		PreparedStatement statement;
