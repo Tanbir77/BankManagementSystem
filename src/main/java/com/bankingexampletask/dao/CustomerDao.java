@@ -7,7 +7,7 @@ import Model.Customer;
 public interface CustomerDao {
 	
 	List<Customer> getAllCustomerName();
-	void getCustomerAndAccountInfo();
-	void getCustomerAndAccountInfo(Long amount);
+	boolean getCustomerAndAccountInfo();
+	boolean getCustomerAndAccountInfo(long amount);
 
 }

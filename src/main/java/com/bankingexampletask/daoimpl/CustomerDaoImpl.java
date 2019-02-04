@@ -38,23 +38,27 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 	
 	@Override
-	public void getCustomerAndAccountInfo() {
+	public boolean getCustomerAndAccountInfo() {
 		
 		DBCustomerOperations dbCustomerOperations = new DBCustomerOperations();
 		ResultSet resultSet = dbCustomerOperations.getCustomerAndAccountInfo();
 		if(resultSet == null) {
 			System.out.println("Query not executed");
+			return false;
 		}
+		return true;
 		
 	}
 	
 	@Override
-	public void getCustomerAndAccountInfo(Long amount) {
+	public boolean getCustomerAndAccountInfo(long amount) {
 		DBCustomerOperations dbCustomerOperations = new DBCustomerOperations();
 		ResultSet resultSet = dbCustomerOperations.getCustomerAndAccountInfo(amount);
 		if(resultSet == null) {
 			System.out.println("Query not executed");
+			return false;
 		}
+		return true;
 		
 	}
 	

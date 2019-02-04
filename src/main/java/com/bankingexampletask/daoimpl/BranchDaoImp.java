@@ -51,15 +51,19 @@ public class BranchDaoImp implements BranchDao {
 		return null;
 	}
 	@Override
-	public void DisplayBranchNameAndAssetsInThousandsDollars() {
+	public boolean DisplayBranchNameAndAssetsInThousandsDollars() {
 		try {
 
-			ResultSet rs = DBBranchOperations.DisplayBranchNameAndAssetsInThousandsOfDollars();
+			if(DBBranchOperations.DisplayBranchNameAndAssetsInThousandsOfDollars() != null) {
+				return true;
+			}
+			
 			
 		} catch (SQLException e) {
 			log.error("Query execution error during Displaying BranchName And Assets", e);
+			
 		}
-		
+		return false;
 		
 	}
 	
