@@ -8,7 +8,7 @@ import java.util.List;
 import com.bankingexampletask.dao.AccountDao;
 
 import DBUtil.DBAccountOperation;
-import DBUtil.DBBranchOperations;
+            
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -21,14 +21,14 @@ public class AccountDaoImp implements AccountDao{
 			ResultSet rs = DBAccountOperation.accountGumberGreaterT700(value1);
 			while (rs.next()) {
 				 accountNumberList.add(rs.getString(1));
-				
 			}
 			return  accountNumberList;
 		} catch (SQLException e) {
 			log.error("error"+e.getMessage());
+			return null;
 		}
 
-		return null;
+		
 	}
 	
 	
@@ -49,9 +49,10 @@ public class AccountDaoImp implements AccountDao{
 			
 		}catch(SQLException e) {
 			log.error("error"+e.getMessage());
+			return null;
 		}
 		
-		return null;
+		
 	}
 	
 	
