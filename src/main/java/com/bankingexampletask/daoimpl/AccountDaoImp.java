@@ -30,4 +30,30 @@ public class AccountDaoImp implements AccountDao{
 
 		return null;
 	}
+	
+	
+	
+	public List<String>  listOfaccount_number_and_balance(long value1,String str){
+		try {
+			
+			
+			List<String> accountNUmberAndBalanceList=new ArrayList<>();
+			ResultSet rs=DBAccountOperation.listOfaccountNumberAndBalance(value1, str);
+			while(rs.next()) {
+				
+				accountNUmberAndBalanceList.add(rs.getString(1));
+			}
+			
+			
+			return accountNUmberAndBalanceList;
+			
+		}catch(SQLException e) {
+			log.error("error"+e.getMessage());
+		}
+		
+		return null;
+	}
+	
+	
+
 }
