@@ -1,27 +1,29 @@
-package com.bankingexampletask.daoimpl;
+package naztech.io.bankingexampletask.daoimpl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bankingexampletask.dao.CustomerDao;
+import lombok.extern.slf4j.Slf4j;
+import naztech.io.bankingexampletask.dao.CustomerDao;
+import naztech.io.bankingexampletask.dbutil.DBCustomerOperations;
+import naztech.io.bankingexampletask.model.Customer;
 
-import DBUtil.DBCustomerOperations;
-import Model.Customer;
-
+@Slf4j
 public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public List<Customer> getAllCustomerName() {
-		// TODO Auto-generated method stub
+		
 		
 		DBCustomerOperations dbCustomerOperations = new DBCustomerOperations();
 		ResultSet resultSet = dbCustomerOperations.getAllCustomerName();
 		if(resultSet == null) {
-			System.out.println("Query not executed");
+			log.debug("Result set is null");
 			return null;
 		}
+		
 		List<Customer> customerNameList = new ArrayList<Customer>();
 		try {
 			while(resultSet.next()) {
@@ -32,7 +34,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			}
 			return customerNameList;
 		} catch (SQLException e) {
-			e.printStackTrace();
+			log.error("error: ",e);
 			return null;
 		}
 	}
@@ -43,7 +45,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		DBCustomerOperations dbCustomerOperations = new DBCustomerOperations();
 		ResultSet resultSet = dbCustomerOperations.getCustomerAndAccountInfo();
 		if(resultSet == null) {
-			System.out.println("Query not executed");
+			log.debug("Result set is null");
 			return false;
 		}
 		return true;
@@ -55,7 +57,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		DBCustomerOperations dbCustomerOperations = new DBCustomerOperations();
 		ResultSet resultSet = dbCustomerOperations.getCustomerAndAccountInfo(amount);
 		if(resultSet == null) {
-			System.out.println("Query not executed");
+			log.debug("Result set is null");
 			return false;
 		}
 		return true;

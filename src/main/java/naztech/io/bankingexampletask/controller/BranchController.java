@@ -1,12 +1,11 @@
-package com.bankingexampletask.controller;
+package naztech.io.bankingexampletask.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bankingexampletask.dao.BranchDao;
-import com.bankingexampletask.daoimpl.BranchDaoImp;
-
-import Model.Branch;
+import naztech.io.bankingexampletask.dao.BranchDao;
+import naztech.io.bankingexampletask.daoimpl.BranchDaoImp;
+import naztech.io.bankingexampletask.model.Branch;
 
 public class BranchController {
 	

@@ -1,4 +1,4 @@
-package com.bankingexampletask.dao;
+package naztech.io.bankingexampletask.dao;
 
 import java.util.List;
 
