@@ -1,10 +1,10 @@
-package com.bankingexampletask.controller;
+package naztech.io.bankingexampletask.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bankingexampletask.dao.AccountDao;
-import com.bankingexampletask.daoimpl.AccountDaoImp;
+import naztech.io.bankingexampletask.dao.AccountDao;
+import naztech.io.bankingexampletask.daoimpl.AccountDaoImp;
 
 public class AccountController {
 	AccountDao accountDao = new AccountDaoImp();

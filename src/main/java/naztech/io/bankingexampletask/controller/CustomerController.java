@@ -1,12 +1,12 @@
-package com.bankingexampletask.controller;
+package naztech.io.bankingexampletask.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bankingexampletask.dao.CustomerDao;
-import com.bankingexampletask.daoimpl.CustomerDaoImpl;
+import naztech.io.bankingexampletask.dao.CustomerDao;
+import naztech.io.bankingexampletask.daoimpl.CustomerDaoImpl;
 
-import Model.Customer;
+import naztech.io.bankingexampletask.model.Customer;
 
 public class CustomerController {
 	

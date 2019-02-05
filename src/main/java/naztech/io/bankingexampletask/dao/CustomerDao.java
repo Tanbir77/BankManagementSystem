@@ -1,8 +1,8 @@
-package com.bankingexampletask.dao;
+package naztech.io.bankingexampletask.dao;
 
 import java.util.List;
 
-import Model.Customer;
+import naztech.io.bankingexampletask.model.Customer;
 
 public interface CustomerDao {
 	

@@ -1,8 +1,10 @@
-package com.bankingexampletask.controller;
+package naztech.io.bankingexampletask.controller;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import naztech.io.bankingexampletask.controller.CustomerController;
 
 public class CustomerControllerTest {
 	

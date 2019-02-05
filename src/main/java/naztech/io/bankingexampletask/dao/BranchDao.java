@@ -1,8 +1,8 @@
-package com.bankingexampletask.dao;
+package naztech.io.bankingexampletask.dao;
 
 import java.util.List;
 
-import Model.Branch;
+import naztech.io.bankingexampletask.model.Branch;
 
 public interface BranchDao {
 	

@@ -1,14 +1,14 @@
-package com.bankingexampletask.daoimpl;
+package naztech.io.bankingexampletask.daoimpl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bankingexampletask.dao.BranchDao;
+import naztech.io.bankingexampletask.dao.BranchDao;
 
-import DBUtil.DBBranchOperations;
-import Model.Branch;
+import naztech.io.bankingexampletask.dbutil.DBBranchOperations;
+import naztech.io.bankingexampletask.model.Branch;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

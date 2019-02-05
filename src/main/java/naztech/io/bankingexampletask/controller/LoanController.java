@@ -1,10 +1,10 @@
-package com.bankingexampletask.controller;
+package naztech.io.bankingexampletask.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bankingexampletask.dao.LoanDao;
-import com.bankingexampletask.daoimpl.LoanDaoImp;
+import naztech.io.bankingexampletask.dao.LoanDao;
+import naztech.io.bankingexampletask.daoimpl.LoanDaoImp;
 
 public class LoanController {
 	

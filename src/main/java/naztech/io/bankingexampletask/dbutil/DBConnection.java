@@ -1,4 +1,4 @@
- package DBUtil;
+ package naztech.io.bankingexampletask.dbutil;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;

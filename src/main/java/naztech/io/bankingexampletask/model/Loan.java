@@ -1,4 +1,4 @@
-package Model;
+package naztech.io.bankingexampletask.model;
 
 public class Loan {
 
